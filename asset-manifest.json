@@ -1,0 +1,198 @@
+{
+  "version": "v0.6.16",
+  "source": "v0.6.15 verified baseline; only final UI text simplified, PWA cache refreshed",
+  "files": {
+    "ASSET_SOURCES.md": {
+      "size": 121,
+      "sha256": "5c4d9c0fe7900135cfa95a172004e8661b2822b7bcceba00310e61ae09fb45df"
+    },
+    "ATTRIBUTION.md": {
+      "size": 699,
+      "sha256": "e26e69d58563c2711ec2bda6144b895b6a400941d26fa049c1748566ea2972f2"
+    },
+    "README.md": {
+      "size": 8925,
+      "sha256": "ae1015c11254524e30e6a8b910a1c6f7e025613e5b038c79214cf38766c2f5ce"
+    },
+    "app.js": {
+      "size": 61470,
+      "sha256": "dc13f3bd127f6e82d0186834b03feeaf2b3b3b1c42a1907f5811a6a8c79f8ab1"
+    },
+    "flow/all-pairs-audit.json": {
+      "size": 61964,
+      "sha256": "22d09cfb5fa86a6ec9c0c99d1bfb60d609e2a2250177d386783496a0cdaea280"
+    },
+    "flow/cardiopulmonary-stages.json": {
+      "size": 20352,
+      "sha256": "02b252c8adaecfb98441c9dd7a284319ecf7149e3379d1766399ba2bdbc19cfc"
+    },
+    "flow/extended-regions.json": {
+      "size": 74018,
+      "sha256": "ff0284f90780cfb5a08d34e6126926d80df373cff35302d95af7e3f1226cb230"
+    },
+    "flow/reference-v058/README-reference.md": {
+      "size": 552,
+      "sha256": "b58965569244edeb960622161d2d39c70e739454a3bcc92084069a5b5cb7a7a2"
+    },
+    "flow/reference-v058/js/directed-blood-network.mjs": {
+      "size": 13026,
+      "sha256": "51a1d40b4f73d5dee20c5d171f45383e4333dbdfbba501e0fd8e722e70335e6a"
+    },
+    "flow/reference-v058/js/flow-timeline.mjs": {
+      "size": 2419,
+      "sha256": "34d9e275d075fe5b1b2a0ce84ee0d7f04403f630b7ae09dc1e23e158135baed3"
+    },
+    "flow/reference-v058/js/graph-engine.js": {
+      "size": 8321,
+      "sha256": "988089970195f19f40be3773ccacfc9e21ab05603d83fdb921099e02df5e364e"
+    },
+    "flow/reference-v058/js/lesson-route-visibility.mjs": {
+      "size": 1380,
+      "sha256": "a4bf0b8f43fb22d1ca3ef1470c656dfeb837afd80eaea54b662a001497557ad4"
+    },
+    "flow/reference-v058/js/pulmonary-network.mjs": {
+      "size": 6140,
+      "sha256": "4dafc777f9e98909013b4e6d7470f266884313107548de4d79943b0091be7e90"
+    },
+    "flow/reference-v058/js/region-routes.mjs": {
+      "size": 294,
+      "sha256": "bae29498752f5497680377311f0e6fdca2bd0f4e2cc2b1a53b6e9e140fa1d80e"
+    },
+    "flow/reference-v058/models/cardiopulmonary-stages.json": {
+      "size": 49960,
+      "sha256": "a8246f14f4a266feeb9939bdd081f6848d9b77b22b1716bb898f7c2a23b5d5b1"
+    },
+    "flow/reference-v058/models/mesh-centerlines-v054.json": {
+      "size": 35883,
+      "sha256": "72d402cb0db471d21cde7683ff60211c16a42f0e3264e049197098ae5e724c2b"
+    },
+    "flow/reference-v058/models/pulmonary-mesh-centerlines-v055.json": {
+      "size": 3432,
+      "sha256": "61b159f181897f94e3c4d4be699fe25f9c502c7a2f63edfad47f9057a3a33037"
+    },
+    "flow/reference-v058/models/systemic-left-arm-stages.json": {
+      "size": 20609,
+      "sha256": "6b79b59277fc3b72f6f7740fd47dad1b0d649ee7d11555114038781ad52a313d"
+    },
+    "flow/reference-v058/models/verified-paths.json": {
+      "size": 29230,
+      "sha256": "fd67b463307d5587dced839d5891e5471f87ad7400a7dd654d61f717737bd6c8"
+    },
+    "flow/systemic-left-arm-stages.json": {
+      "size": 20626,
+      "sha256": "1d1d5b6429fd44b32efeb532324860f15db6c82e0f19c4cc62e2effbc3738b5a"
+    },
+    "flow/systemic-left-leg-stages.json": {
+      "size": 13088,
+      "sha256": "18e9809927e723939fd660b6f2f211edef76d69ca95ca4b245ebb2bd948bb576"
+    },
+    "flow-network.mjs": {
+      "size": 8353,
+      "sha256": "bec255c07b11c0747da8da1e0838648992ff17afff9e740fd130e8ec46fe3615"
+    },
+    "home-button.js": {
+      "size": 5238,
+      "sha256": "82d225c8b8a40786e8ed4bc92d32bdab1c5831a1eef722f808aa9895c0d78a7e"
+    },
+    "icon.svg": {
+      "size": 479,
+      "sha256": "a1dc8df427037af32fa6337a4aee52fe03fee7e79d60817a845808336dc48683"
+    },
+    "index.html": {
+      "size": 6865,
+      "sha256": "63318396d907941bbe246452bd341d0f354d58596aae08ff2b3d21730aae4522"
+    },
+    "manifest.webmanifest": {
+      "size": 380,
+      "sha256": "7261b2e115d4393ad441493273b0425d51947c5d76fbd61b320daf11f442dbb0"
+    },
+    "models/arteries-core-only.glb": {
+      "size": 84796,
+      "sha256": "f142370d16fd12ef18d416db4587a969fe689f66026cc18169c2b0343834cdef"
+    },
+    "models/arteries-fine-extra.glb": {
+      "size": 1273836,
+      "sha256": "71033ea68c31baec8838d1155ff6df6f7c17883e51c4547838706fadc94cbfc6"
+    },
+    "models/arteries-main-extra.glb": {
+      "size": 223236,
+      "sha256": "816643dd7c43ec25b67a22d994f92074bb496ffcd5467e128baf1d193bb48c67"
+    },
+    "models/mesh-levels.json": {
+      "size": 63600,
+      "sha256": "a2bfcff13ae768350e7c6dbce4ea659adfbe7d53551f967f8ddb220f50729630"
+    },
+    "models/organs.glb": {
+      "size": 1310144,
+      "sha256": "597f93129e9cdf6c0eb0217c784b6e368eafd06dc5ae5f5004cb9446a82296ed"
+    },
+    "models/skin.glb": {
+      "size": 1164120,
+      "sha256": "4fdad1a584432d8b43ff4e165fb8346ba16d228866fc6109b858ef64cc171253"
+    },
+    "models/veins-core-only.glb": {
+      "size": 92516,
+      "sha256": "da17cddede83fa12133b3eb3146b8a86843ee24ea3e1313d4713f4737b6a405e"
+    },
+    "models/veins-fine-extra.glb": {
+      "size": 709720,
+      "sha256": "c3c1202abf31309cbd8483ba746297de111f320fccd23e2b1dc3f9f8343e0bd7"
+    },
+    "models/veins-main-extra.glb": {
+      "size": 238104,
+      "sha256": "48c9074cb4d4742ad3fc0c2865b6691598d28e9bf8febb21a1bfbc4394607808"
+    },
+    "style.css": {
+      "size": 17922,
+      "sha256": "c3bdf330f2782fa99202dcf619743ecc238f6faa797fd3f711d5d5d03eb71547"
+    },
+    "sw.js": {
+      "size": 2396,
+      "sha256": "4d895d7334f571e4626cf2346f40513490637d9174a2275dd682c76c7d1c33c1"
+    },
+    "tests/test-all-pairs.mjs": {
+      "size": 103,
+      "sha256": "3479803719c1c6785504e393a4d06620b1b36d359601138440043f2ae86134e4"
+    },
+    "tests/test-flow-network.mjs": {
+      "size": 4053,
+      "sha256": "bd84c54a9fe17ebaf70eff3006e72f00982ba94414dc1fad8c767859c7e9b6d2"
+    },
+    "vendor/three/LICENSE": {
+      "size": 1081,
+      "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d"
+    },
+    "vendor/three/build/three.module.js": {
+      "size": 1272972,
+      "sha256": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495"
+    },
+    "vendor/three/examples/jsm/controls/OrbitControls.js": {
+      "size": 30973,
+      "sha256": "7aa4372a5ec60b49988edde81014c7361740a57962d032003ca33301c1f4edd5"
+    },
+    "vendor/three/examples/jsm/libs/draco/draco_decoder.js": {
+      "size": 719410,
+      "sha256": "30e4d486fa020737af10e3c56197693e5b904bdc05b8bfa5d7b06751dec6da04"
+    },
+    "vendor/three/examples/jsm/libs/draco/draco_decoder.wasm": {
+      "size": 285747,
+      "sha256": "c55a594e8ffd18426d36b27fea9618af3df5e173640a3e56d46f09d76f0574f2"
+    },
+    "vendor/three/examples/jsm/libs/draco/draco_wasm_wrapper.js": {
+      "size": 58763,
+      "sha256": "e8049906ef3f8f75d3456c22a3f31bfdfe5b5b5bd09ccdec613b9e9a49d554d8"
+    },
+    "vendor/three/examples/jsm/loaders/DRACOLoader.js": {
+      "size": 13628,
+      "sha256": "65c114ecb7b349cdc59c75b2c92d19cca672a138060dba0f60f64262fa40408c"
+    },
+    "vendor/three/examples/jsm/loaders/GLTFLoader.js": {
+      "size": 108522,
+      "sha256": "d073b438e6a07e1359741dd5d6c76c953420cc0d4fd84eb1bdde94315540e6a3"
+    },
+    "vendor/three/examples/jsm/utils/BufferGeometryUtils.js": {
+      "size": 31906,
+      "sha256": "9be041e96308775d00e2695cc607645b9a9b64fd7c0e759dd8f7c00a8d92becb"
+    }
+  }
+}

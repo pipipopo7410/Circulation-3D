@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<meta name="theme-color" content="#102737"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<link rel="manifest" href="./manifest.webmanifest"/>
+<title>人體血液循環 3D｜心腔與血流 v0.6.16</title>
+<link rel="stylesheet" href="./style.css"/>
+<script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
+</head><body>
+<div class="app">
+  <main class="viewer" aria-label="人體血液循環 3D 觀察區">
+    <div id="canvas"></div>
+    <div class="overTop"><div class="brand">人體血液循環 <small>3D</small></div></div>
+    <button id="resetView" class="resetView" type="button" title="回到預設視角" aria-label="回到預設視角"><span class="resetIcon">↺</span><span>重設視角</span></button>
+    <div id="selected" class="selected" hidden><strong id="pickedName">—</strong><small id="pickedType">—</small></div>
+    <div id="loading" class="loading" role="status"><h3 id="loadTitle">正在載入 3D 人體</h3><p id="loadDetail">準備模型中…</p><div class="bar"><i id="bar"></i></div></div>
+  </main>
+  <aside class="dock" id="teacherDock"><div class="dockInner" id="dockInner">
+    <h2>血液循環</h2>
+    <section class="section" aria-label="血管層次">
+      <div class="heading">血管層次</div>
+      <div class="levels" role="group" aria-label="血管複雜程度">
+        <button data-mode="full">完整</button>
+        <button data-mode="main" class="active">簡化</button>
+        <button data-mode="core">超簡化</button>
+      </div>
+      <div class="switchrow"><button id="arteries" class="active"><span class="dot"></span> 動脈</button><button id="veins" class="active"><span class="dot blue"></span> 靜脈</button></div>
+      <label class="check"><input type="checkbox" id="shell" checked/> 自然人體外殼</label>
+    </section>
+
+    <section class="section heartSection" aria-label="心臟觀察">
+      <div class="headingRow"><span class="heading">心臟</span><label class="check"><input type="checkbox" id="heart" checked/> 顯示</label></div>
+      <div class="heartModes" role="group" aria-label="心臟顯示模式">
+        <button id="heartFocus" data-heart-mode="opaque" class="active" aria-pressed="true" disabled>聚焦心臟外觀</button>
+        <button data-heart-mode="transparent" aria-pressed="false" disabled>半透明</button>
+        <button data-heart-mode="chambers" aria-pressed="false" disabled>四腔室</button>
+      </div>
+      <div id="chamberSection" hidden>
+        <div class="chamberButtons" role="group" aria-label="四腔室，可複選">
+          <button data-chamber="RA" aria-pressed="false" disabled>右心房</button>
+          <button data-chamber="LA" aria-pressed="false" disabled>左心房</button>
+          <button data-chamber="RV" aria-pressed="false" disabled>右心室</button>
+          <button data-chamber="LV" aria-pressed="true" disabled>左心室</button>
+        </div>
+      </div>
+      <label class="check detailCheck"><input type="checkbox" id="showHeartDetails" disabled/> 瓣膜與乳突肌</label>
+      <details class="advanced" id="heartAdvanced"><summary>個別透明度</summary>
+        <div class="chamberOpacityGrid">
+          <label class="chamberOpacityItem ra"><span><i></i>右心房</span><input type="range" data-chamber-opacity="RA" min="5" max="100" step="1" value="7"/><output data-chamber-opacity-label="RA">7%</output></label>
+          <label class="chamberOpacityItem rv"><span><i></i>右心室</span><input type="range" data-chamber-opacity="RV" min="5" max="100" step="1" value="7"/><output data-chamber-opacity-label="RV">7%</output></label>
+          <label class="chamberOpacityItem la"><span><i></i>左心房</span><input type="range" data-chamber-opacity="LA" min="5" max="100" step="1" value="7"/><output data-chamber-opacity-label="LA">7%</output></label>
+          <label class="chamberOpacityItem lv"><span><i></i>左心室</span><input type="range" data-chamber-opacity="LV" min="5" max="100" step="1" value="96"/><output data-chamber-opacity-label="LV">96%</output></label>
+        </div>
+      </details>
+    </section>
+
+    <section class="section flowSection" aria-label="血流路徑選擇">
+      <div class="heading">血流路徑</div>
+      <div class="flowSelectors">
+        <label for="flowFrom">起點<select id="flowFrom" disabled></select></label>
+        <label for="flowTo">終點<select id="flowTo" disabled></select></label>
+      </div>
+      <div class="flowButtons">
+        <button id="showFlow" disabled>顯示路徑</button>
+        
+      </div>
+      <div class="flowSpeedRow" role="group" aria-label="血流速度">
+        <div class="flowSpeedButtons">
+          <button type="button" data-flow-speed="1" class="active" aria-pressed="true">正常 1×</button>
+          <button type="button" data-flow-speed="2" aria-pressed="false">加速 2×</button>
+        </div>
+      </div>
+      <div id="flowStatus" role="status" class="visuallyHidden">正在建立血流路網…</div>
+      <small id="flowCaution" class="flowCaution" hidden></small>
+    </section>
+    <section class="section" aria-label="器官顯示">
+      <div class="heading">器官</div>
+      <div class="organButtons" role="group" aria-label="顯示或隱藏半透明器官，可複選">
+        <button data-organ="kidney" aria-pressed="false" disabled>腎臟</button>
+        <button data-organ="lung" aria-pressed="false" disabled>肺臟</button>
+        <button data-organ="liver" aria-pressed="false" disabled>肝臟</button>
+        <button data-organ="intestine" aria-pressed="false" disabled>小腸</button>
+      </div>
+    </section>
+  </div></aside>
+</div>
+<div class="visuallyHidden" aria-hidden="true">
+  <span id="count"></span><span id="tierDesc"></span><span id="shellHint"></span><span id="heartHint"></span>
+  <span id="skinStatus"></span><span id="heartStatus"></span><span id="chamberQA"></span>
+  <span id="linkedVesselStatus"></span><span id="chamberMessage"></span>
+</div>
+<script>
+/* v0.6.15 initial placement: old draggable coordinates may have been stored in the top left. */
+(()=>{try{
+  const path=location.pathname;
+  const mirrored=path.match(/\/apps\/([^/]+)\//);
+  const unit=mirrored?'mirror-'+mirrored[1]:(path.split('/').filter(Boolean)[0]||'root');
+  const done='blood3d-v069-home-default:'+unit;
+  if(localStorage.getItem(done)!=='1'){
+    localStorage.removeItem('gg-floating-home-position-v1:'+unit);
+    localStorage.setItem(done,'1');
+  }
+}catch(e){}})();
+</script>
+<script type="module" src="./app.js"></script><script src="./home-button.js"></script>
+</body></html>
