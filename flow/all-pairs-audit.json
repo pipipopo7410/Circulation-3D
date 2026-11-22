@@ -1,0 +1,2277 @@
+{
+  "version": "0.6.7",
+  "nodes": 11,
+  "pairs": 121,
+  "notes": "區域與微血管為教學示意，原生血管坐標另行驗證；A=B 完整閉環",
+  "places": {
+    "ra": "右心房",
+    "rv": "右心室",
+    "la": "左心房",
+    "lv": "左心室",
+    "pulmonary_artery": "肺動脈",
+    "pulmonary_vein": "肺靜脈",
+    "head": "頭部末端",
+    "left_hand": "左手掌",
+    "right_hand": "右手掌",
+    "left_foot": "左腳末端",
+    "right_foot": "右腳末端"
+  },
+  "pairsList": [
+    {
+      "from": "ra",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 12,
+      "fromLabel": "右心房",
+      "toLabel": "右心房",
+      "path": "右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房"
+    },
+    {
+      "from": "ra",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv"
+      ],
+      "capillaryCount": 0,
+      "schematicCount": 1,
+      "fromLabel": "右心房",
+      "toLabel": "右心室",
+      "path": "右心房 → 右心室"
+    },
+    {
+      "from": "ra",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 5,
+      "fromLabel": "右心房",
+      "toLabel": "左心房",
+      "path": "右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房"
+    },
+    {
+      "from": "ra",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 6,
+      "fromLabel": "右心房",
+      "toLabel": "左心室",
+      "path": "右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室"
+    },
+    {
+      "from": "ra",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 0,
+      "schematicCount": 2,
+      "fromLabel": "右心房",
+      "toLabel": "肺動脈",
+      "path": "右心房 → 右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "ra",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 4,
+      "fromLabel": "右心房",
+      "toLabel": "肺靜脈",
+      "path": "右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "ra",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 10,
+      "fromLabel": "右心房",
+      "toLabel": "頭部末端",
+      "path": "右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "ra",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 9,
+      "fromLabel": "右心房",
+      "toLabel": "左手掌",
+      "path": "右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "ra",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 10,
+      "fromLabel": "右心房",
+      "toLabel": "右手掌",
+      "path": "右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "ra",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 12,
+      "fromLabel": "右心房",
+      "toLabel": "左腳末端",
+      "path": "右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "ra",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 14,
+      "fromLabel": "右心房",
+      "toLabel": "右腳末端",
+      "path": "右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    },
+    {
+      "from": "rv",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 11,
+      "fromLabel": "右心室",
+      "toLabel": "右心房",
+      "path": "右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房"
+    },
+    {
+      "from": "rv",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 12,
+      "fromLabel": "右心室",
+      "toLabel": "右心室",
+      "path": "右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室"
+    },
+    {
+      "from": "rv",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 4,
+      "fromLabel": "右心室",
+      "toLabel": "左心房",
+      "path": "右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房"
+    },
+    {
+      "from": "rv",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 5,
+      "fromLabel": "右心室",
+      "toLabel": "左心室",
+      "path": "右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室"
+    },
+    {
+      "from": "rv",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 0,
+      "schematicCount": 1,
+      "fromLabel": "右心室",
+      "toLabel": "肺動脈",
+      "path": "右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "rv",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 3,
+      "fromLabel": "右心室",
+      "toLabel": "肺靜脈",
+      "path": "右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "rv",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 9,
+      "fromLabel": "右心室",
+      "toLabel": "頭部末端",
+      "path": "右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "rv",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 8,
+      "fromLabel": "右心室",
+      "toLabel": "左手掌",
+      "path": "右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "rv",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 9,
+      "fromLabel": "右心室",
+      "toLabel": "右手掌",
+      "path": "右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "rv",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 11,
+      "fromLabel": "右心室",
+      "toLabel": "左腳末端",
+      "path": "右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "rv",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 13,
+      "fromLabel": "右心室",
+      "toLabel": "右腳末端",
+      "path": "右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    },
+    {
+      "from": "la",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 7,
+      "fromLabel": "左心房",
+      "toLabel": "右心房",
+      "path": "左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房"
+    },
+    {
+      "from": "la",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 8,
+      "fromLabel": "左心房",
+      "toLabel": "右心室",
+      "path": "左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室"
+    },
+    {
+      "from": "la",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 12,
+      "fromLabel": "左心房",
+      "toLabel": "左心房",
+      "path": "左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房"
+    },
+    {
+      "from": "la",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "la_lv"
+      ],
+      "capillaryCount": 0,
+      "schematicCount": 1,
+      "fromLabel": "左心房",
+      "toLabel": "左心室",
+      "path": "左心房 → 左心室"
+    },
+    {
+      "from": "la",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 9,
+      "fromLabel": "左心房",
+      "toLabel": "肺動脈",
+      "path": "左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "la",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 11,
+      "fromLabel": "左心房",
+      "toLabel": "肺靜脈",
+      "path": "左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "la",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "la_lv",
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 5,
+      "fromLabel": "左心房",
+      "toLabel": "頭部末端",
+      "path": "左心房 → 左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "la",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 4,
+      "fromLabel": "左心房",
+      "toLabel": "左手掌",
+      "path": "左心房 → 左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "la",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "la_lv",
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 5,
+      "fromLabel": "左心房",
+      "toLabel": "右手掌",
+      "path": "左心房 → 左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "la",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 7,
+      "fromLabel": "左心房",
+      "toLabel": "左腳末端",
+      "path": "左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "la",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 9,
+      "fromLabel": "左心房",
+      "toLabel": "右腳末端",
+      "path": "左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    },
+    {
+      "from": "lv",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 6,
+      "fromLabel": "左心室",
+      "toLabel": "右心房",
+      "path": "左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房"
+    },
+    {
+      "from": "lv",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 7,
+      "fromLabel": "左心室",
+      "toLabel": "右心室",
+      "path": "左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室"
+    },
+    {
+      "from": "lv",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 11,
+      "fromLabel": "左心室",
+      "toLabel": "左心房",
+      "path": "左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房"
+    },
+    {
+      "from": "lv",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 12,
+      "fromLabel": "左心室",
+      "toLabel": "左心室",
+      "path": "左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室"
+    },
+    {
+      "from": "lv",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 8,
+      "fromLabel": "左心室",
+      "toLabel": "肺動脈",
+      "path": "左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "lv",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 10,
+      "fromLabel": "左心室",
+      "toLabel": "肺靜脈",
+      "path": "左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "lv",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 4,
+      "fromLabel": "左心室",
+      "toLabel": "頭部末端",
+      "path": "左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "lv",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 3,
+      "fromLabel": "左心室",
+      "toLabel": "左手掌",
+      "path": "左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "lv",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 4,
+      "fromLabel": "左心室",
+      "toLabel": "右手掌",
+      "path": "左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "lv",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 6,
+      "fromLabel": "左心室",
+      "toLabel": "左腳末端",
+      "path": "左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "lv",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 8,
+      "fromLabel": "左心室",
+      "toLabel": "右腳末端",
+      "path": "左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 10,
+      "fromLabel": "肺動脈",
+      "toLabel": "右心房",
+      "path": "肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 11,
+      "fromLabel": "肺動脈",
+      "toLabel": "右心室",
+      "path": "肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv",
+        "pv_la"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 3,
+      "fromLabel": "肺動脈",
+      "toLabel": "左心房",
+      "path": "肺動脈 → 肺靜脈 → 左心房"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv",
+        "pv_la",
+        "la_lv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 4,
+      "fromLabel": "肺動脈",
+      "toLabel": "左心室",
+      "path": "肺動脈 → 肺靜脈 → 左心房 → 左心室"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 12,
+      "fromLabel": "肺動脈",
+      "toLabel": "肺動脈",
+      "path": "肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 2,
+      "fromLabel": "肺動脈",
+      "toLabel": "肺靜脈",
+      "path": "肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 8,
+      "fromLabel": "肺動脈",
+      "toLabel": "頭部末端",
+      "path": "肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 7,
+      "fromLabel": "肺動脈",
+      "toLabel": "左手掌",
+      "path": "肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 8,
+      "fromLabel": "肺動脈",
+      "toLabel": "右手掌",
+      "path": "肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 10,
+      "fromLabel": "肺動脈",
+      "toLabel": "左腳末端",
+      "path": "肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "pulmonary_artery",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 12,
+      "fromLabel": "肺動脈",
+      "toLabel": "右腳末端",
+      "path": "肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 8,
+      "fromLabel": "肺靜脈",
+      "toLabel": "右心房",
+      "path": "肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 9,
+      "fromLabel": "肺靜脈",
+      "toLabel": "右心室",
+      "path": "肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "pv_la"
+      ],
+      "capillaryCount": 0,
+      "schematicCount": 1,
+      "fromLabel": "肺靜脈",
+      "toLabel": "左心房",
+      "path": "肺靜脈 → 左心房"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "pv_la",
+        "la_lv"
+      ],
+      "capillaryCount": 0,
+      "schematicCount": 2,
+      "fromLabel": "肺靜脈",
+      "toLabel": "左心室",
+      "path": "肺靜脈 → 左心房 → 左心室"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 10,
+      "fromLabel": "肺靜脈",
+      "toLabel": "肺動脈",
+      "path": "肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand",
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 12,
+      "fromLabel": "肺靜脈",
+      "toLabel": "肺靜脈",
+      "path": "肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 6,
+      "fromLabel": "肺靜脈",
+      "toLabel": "頭部末端",
+      "path": "肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 5,
+      "fromLabel": "肺靜脈",
+      "toLabel": "左手掌",
+      "path": "肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 6,
+      "fromLabel": "肺靜脈",
+      "toLabel": "右手掌",
+      "path": "肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 8,
+      "fromLabel": "肺靜脈",
+      "toLabel": "左腳末端",
+      "path": "肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "pulmonary_vein",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 10,
+      "fromLabel": "肺靜脈",
+      "toLabel": "右腳末端",
+      "path": "肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    },
+    {
+      "from": "head",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 3,
+      "fromLabel": "頭部末端",
+      "toLabel": "右心房",
+      "path": "頭部末端 → 上腔靜脈 → 右心房"
+    },
+    {
+      "from": "head",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra",
+        "ra_rv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 4,
+      "fromLabel": "頭部末端",
+      "toLabel": "右心室",
+      "path": "頭部末端 → 上腔靜脈 → 右心房 → 右心室"
+    },
+    {
+      "from": "head",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 8,
+      "fromLabel": "頭部末端",
+      "toLabel": "左心房",
+      "path": "頭部末端 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房"
+    },
+    {
+      "from": "head",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 9,
+      "fromLabel": "頭部末端",
+      "toLabel": "左心室",
+      "path": "頭部末端 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室"
+    },
+    {
+      "from": "head",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 5,
+      "fromLabel": "頭部末端",
+      "toLabel": "肺動脈",
+      "path": "頭部末端 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "head",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 7,
+      "fromLabel": "頭部末端",
+      "toLabel": "肺靜脈",
+      "path": "頭部末端 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "head",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 13,
+      "fromLabel": "頭部末端",
+      "toLabel": "頭部末端",
+      "path": "頭部末端 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "head",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 12,
+      "fromLabel": "頭部末端",
+      "toLabel": "左手掌",
+      "path": "頭部末端 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "head",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 13,
+      "fromLabel": "頭部末端",
+      "toLabel": "右手掌",
+      "path": "頭部末端 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "head",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 15,
+      "fromLabel": "頭部末端",
+      "toLabel": "左腳末端",
+      "path": "頭部末端 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "head",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "head_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 17,
+      "fromLabel": "頭部末端",
+      "toLabel": "右腳末端",
+      "path": "頭部末端 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    },
+    {
+      "from": "left_hand",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 3,
+      "fromLabel": "左手掌",
+      "toLabel": "右心房",
+      "path": "左手掌 → 上腔靜脈 → 右心房"
+    },
+    {
+      "from": "left_hand",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 4,
+      "fromLabel": "左手掌",
+      "toLabel": "右心室",
+      "path": "左手掌 → 上腔靜脈 → 右心房 → 右心室"
+    },
+    {
+      "from": "left_hand",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 8,
+      "fromLabel": "左手掌",
+      "toLabel": "左心房",
+      "path": "左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房"
+    },
+    {
+      "from": "left_hand",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 9,
+      "fromLabel": "左手掌",
+      "toLabel": "左心室",
+      "path": "左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室"
+    },
+    {
+      "from": "left_hand",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 5,
+      "fromLabel": "左手掌",
+      "toLabel": "肺動脈",
+      "path": "左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "left_hand",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 7,
+      "fromLabel": "左手掌",
+      "toLabel": "肺靜脈",
+      "path": "左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "left_hand",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 13,
+      "fromLabel": "左手掌",
+      "toLabel": "頭部末端",
+      "path": "左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "left_hand",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 12,
+      "fromLabel": "左手掌",
+      "toLabel": "左手掌",
+      "path": "左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "left_hand",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 13,
+      "fromLabel": "左手掌",
+      "toLabel": "右手掌",
+      "path": "左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "left_hand",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 15,
+      "fromLabel": "左手掌",
+      "toLabel": "左腳末端",
+      "path": "左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "left_hand",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "left_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 17,
+      "fromLabel": "左手掌",
+      "toLabel": "右腳末端",
+      "path": "左手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    },
+    {
+      "from": "right_hand",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 4,
+      "fromLabel": "右手掌",
+      "toLabel": "右心房",
+      "path": "右手掌 → 上腔靜脈 → 右心房"
+    },
+    {
+      "from": "right_hand",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra",
+        "ra_rv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 5,
+      "fromLabel": "右手掌",
+      "toLabel": "右心室",
+      "path": "右手掌 → 上腔靜脈 → 右心房 → 右心室"
+    },
+    {
+      "from": "right_hand",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 9,
+      "fromLabel": "右手掌",
+      "toLabel": "左心房",
+      "path": "右手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房"
+    },
+    {
+      "from": "right_hand",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 10,
+      "fromLabel": "右手掌",
+      "toLabel": "左心室",
+      "path": "右手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室"
+    },
+    {
+      "from": "right_hand",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 6,
+      "fromLabel": "右手掌",
+      "toLabel": "肺動脈",
+      "path": "右手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "right_hand",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 8,
+      "fromLabel": "右手掌",
+      "toLabel": "肺靜脈",
+      "path": "右手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "right_hand",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 14,
+      "fromLabel": "右手掌",
+      "toLabel": "頭部末端",
+      "path": "右手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "right_hand",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 13,
+      "fromLabel": "右手掌",
+      "toLabel": "左手掌",
+      "path": "右手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "right_hand",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 14,
+      "fromLabel": "右手掌",
+      "toLabel": "右手掌",
+      "path": "右手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "right_hand",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 16,
+      "fromLabel": "右手掌",
+      "toLabel": "左腳末端",
+      "path": "右手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "right_hand",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "right_hand_svc",
+        "svc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 18,
+      "fromLabel": "右手掌",
+      "toLabel": "右腳末端",
+      "path": "右手掌 → 上腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    },
+    {
+      "from": "left_foot",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 7,
+      "fromLabel": "左腳末端",
+      "toLabel": "右心房",
+      "path": "左腳末端 → 下腔靜脈 → 右心房"
+    },
+    {
+      "from": "left_foot",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra",
+        "ra_rv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 8,
+      "fromLabel": "左腳末端",
+      "toLabel": "右心室",
+      "path": "左腳末端 → 下腔靜脈 → 右心房 → 右心室"
+    },
+    {
+      "from": "left_foot",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 12,
+      "fromLabel": "左腳末端",
+      "toLabel": "左心房",
+      "path": "左腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房"
+    },
+    {
+      "from": "left_foot",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 13,
+      "fromLabel": "左腳末端",
+      "toLabel": "左心室",
+      "path": "左腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室"
+    },
+    {
+      "from": "left_foot",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 9,
+      "fromLabel": "左腳末端",
+      "toLabel": "肺動脈",
+      "path": "左腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "left_foot",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 11,
+      "fromLabel": "左腳末端",
+      "toLabel": "肺靜脈",
+      "path": "左腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "left_foot",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 17,
+      "fromLabel": "左腳末端",
+      "toLabel": "頭部末端",
+      "path": "左腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "left_foot",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 16,
+      "fromLabel": "左腳末端",
+      "toLabel": "左手掌",
+      "path": "左腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "left_foot",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 17,
+      "fromLabel": "左腳末端",
+      "toLabel": "右手掌",
+      "path": "左腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "left_foot",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 19,
+      "fromLabel": "左腳末端",
+      "toLabel": "左腳末端",
+      "path": "左腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "left_foot",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "left_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 21,
+      "fromLabel": "左腳末端",
+      "toLabel": "右腳末端",
+      "path": "左腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    },
+    {
+      "from": "right_foot",
+      "to": "ra",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 9,
+      "fromLabel": "右腳末端",
+      "toLabel": "右心房",
+      "path": "右腳末端 → 下腔靜脈 → 右心房"
+    },
+    {
+      "from": "right_foot",
+      "to": "rv",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra",
+        "ra_rv"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 10,
+      "fromLabel": "右腳末端",
+      "toLabel": "右心室",
+      "path": "右腳末端 → 下腔靜脈 → 右心房 → 右心室"
+    },
+    {
+      "from": "right_foot",
+      "to": "la",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 14,
+      "fromLabel": "右腳末端",
+      "toLabel": "左心房",
+      "path": "右腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房"
+    },
+    {
+      "from": "right_foot",
+      "to": "lv",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 15,
+      "fromLabel": "右腳末端",
+      "toLabel": "左心室",
+      "path": "右腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室"
+    },
+    {
+      "from": "right_foot",
+      "to": "pulmonary_artery",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa"
+      ],
+      "capillaryCount": 1,
+      "schematicCount": 11,
+      "fromLabel": "右腳末端",
+      "toLabel": "肺動脈",
+      "path": "右腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈"
+    },
+    {
+      "from": "right_foot",
+      "to": "pulmonary_vein",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv"
+      ],
+      "capillaryCount": 2,
+      "schematicCount": 13,
+      "fromLabel": "右腳末端",
+      "toLabel": "肺靜脈",
+      "path": "右腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈"
+    },
+    {
+      "from": "right_foot",
+      "to": "head",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_head"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 19,
+      "fromLabel": "右腳末端",
+      "toLabel": "頭部末端",
+      "path": "右腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 頭部末端"
+    },
+    {
+      "from": "right_foot",
+      "to": "left_hand",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_left_hand"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 18,
+      "fromLabel": "右腳末端",
+      "toLabel": "左手掌",
+      "path": "右腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 左手掌"
+    },
+    {
+      "from": "right_foot",
+      "to": "right_hand",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_right_hand"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 19,
+      "fromLabel": "右腳末端",
+      "toLabel": "右手掌",
+      "path": "右腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 右手掌"
+    },
+    {
+      "from": "right_foot",
+      "to": "left_foot",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_left_foot"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 21,
+      "fromLabel": "右腳末端",
+      "toLabel": "左腳末端",
+      "path": "右腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 左腳末端"
+    },
+    {
+      "from": "right_foot",
+      "to": "right_foot",
+      "exists": true,
+      "edgeIds": [
+        "right_foot_ivc",
+        "ivc_ra",
+        "ra_rv",
+        "rv_pulmonary_trunk",
+        "pulmonary_trunk_to_pa",
+        "pa_to_pv",
+        "pv_la",
+        "la_lv",
+        "lv_arch",
+        "arch_descending",
+        "descending_to_lower_aorta",
+        "lower_aorta_right_foot"
+      ],
+      "capillaryCount": 3,
+      "schematicCount": 23,
+      "fromLabel": "右腳末端",
+      "toLabel": "右腳末端",
+      "path": "右腳末端 → 下腔靜脈 → 右心房 → 右心室 → 肺動脈幹 → 肺動脈 → 肺靜脈 → 左心房 → 左心室 → 主動脈弓 → 降主動脈 → 腹主動脈 → 右腳末端"
+    }
+  ]
+}
